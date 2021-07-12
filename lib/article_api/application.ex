@@ -13,7 +13,9 @@ defmodule ArticleApi.Application do
     children = [
       # Starts a worker by calling: ArticleApi.Worker.start_link(arg)
       # {ArticleApi.Worker, arg}
-      {Plug.Cowboy, scheme: :http, plug: Routes, options: [port: port]}
+
+      {Plug.Cowboy, scheme: :http, plug: Routes, options: [port: port]},
+      {ArticleApi.ArticleService, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

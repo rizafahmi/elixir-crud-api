@@ -1,7 +1,7 @@
 defmodule Routes do
   use Plug.Router
 
-  # alias ArticleApi.ArticleService
+  alias ArticleApi.ArticleService
 
   plug(:match)
 
@@ -12,5 +12,32 @@ defmodule Routes do
 
   get "/" do
     send_resp(conn, 200, Jason.encode!(%{"status" => "OK"}))
+  end
+
+  get "/all" do
+    response = ArticleService.get_all_articles()
+    handle_response(response, conn)
+  end
+
+  post "/new" do
+    response = ArticleService.add_article(conn.body_params)
+    handle_response(response, conn)
+  end
+
+  get "/details/:id" do
+    response = ArticleService.get_one_article(id)
+    handle_response(response, conn)
+  end
+
+  defp handle_response(response, conn) do
+    %{code: code, message: message} =
+      case response do
+        {:ok, message} -> %{code: 200, message: Jason.encode!(message)}
+        {:not_found, message} -> %{code: 404, message: message}
+        {:malformed_data, message} -> %{code: 400, message: message}
+        {:server_error, _message} -> %{code: 500, message: "An error occured internally"}
+      end
+
+    send_resp(conn, code, message)
   end
 end
