@@ -4,4 +4,5 @@ REST API adalah cara paling populer digunakan untuk komunikasi antara client dan
 
 Kita akan membuat #API untuk mengelola artikel seperti #didietchallenge dengan operasi #CRUD menggunakan Elixir, Plug dan Cowboy 🤠
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jEHI7IcBUBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![Video Tutorial](https://i3.ytimg.com/vi/jEHI7IcBUBQ/0.jpg)](https://youtu.be/jEHI7IcBUBQ)
