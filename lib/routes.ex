@@ -29,6 +29,18 @@ defmodule Routes do
     handle_response(response, conn)
   end
 
+  put "/update/:id" do
+    # Update
+    response = ArticleService.update_article(id, conn.body_params)
+    handle_response(response, conn)
+  end
+
+  delete "/delete/:id" do
+    # Delete
+    response = ArticleService.remove_article(id)
+    handle_response(response, conn)
+  end
+
   defp handle_response(response, conn) do
     %{code: code, message: message} =
       case response do
