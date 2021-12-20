@@ -1,21 +1,7 @@
-# ArticleApi
+# Membangun Server REST API dengan #Elixir - #didietchallenge
 
-**TODO: Add description**
+REST API adalah cara paling populer digunakan untuk komunikasi antara client dan server melalui protokol #HTTP.
 
-## Installation
+Kita akan membuat #API untuk mengelola artikel seperti #didietchallenge dengan operasi #CRUD menggunakan Elixir, Plug dan Cowboy 🤠
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `article_api` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:article_api, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/article_api](https://hexdocs.pm/article_api).
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jEHI7IcBUBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
